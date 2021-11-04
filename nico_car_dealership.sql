@@ -30,8 +30,8 @@ CREATE TABLE car(
 	miles INTEGER,
 	last_updated DATE,
 	car_condition VARCHAR,
-	customer_id INTEGER
-	FOREIGN KEY(customer_id) REFERENCES customer(customer_id)
+	customer_id INTEGER,
+	FOREIGN KEY(customer_id) REFERENCES customer(customer_id)	
 );
 
 CREATE TABLE service(
@@ -51,7 +51,7 @@ CREATE TABLE service_order(
 	mechanic_id INTEGER,
 	task_description VARCHAR(250),
 	parts_used VARCHAR(250),
-	FOREIGN KEY(service_id) REFERENCES service(service_id)
+	FOREIGN KEY(service_id) REFERENCES service(service_id),
 	FOREIGN KEY(mechanic_id) REFERENCES mechanic(mechanic_id)
 );
 
@@ -62,10 +62,9 @@ CREATE TABLE invoice(
 	sales_person_id INTEGER,
 	customer_id INTEGER,
 	finance_id INTEGER,
-	vin INTEGER
-	FOREIGN KEY(sales_person_id) REFERENCES sales(sales_person_id),
-	FOREIGN KEY(customer_id) REFERENCES customer(customer_id) 
-	FOREIGN KEY(finance_id) REFERENCES finance(financee_id)
+	vin INTEGER,
+	FOREIGN KEY(sales_person_id) REFERENCES sales_people(sales_person_id),
+	FOREIGN KEY(customer_id) REFERENCES customer(customer_id), 
+	FOREIGN KEY(finance_id) REFERENCES finance(finance_id),
 	FOREIGN KEY(vin) REFERENCES car(vin)
-	
 );
