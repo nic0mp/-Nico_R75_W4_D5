@@ -5,8 +5,8 @@ INSERT INTO customer(
 	last_name
 )VALUES(
 	3,
-	'Renee',
-	'Dupree'
+	'Geoff',
+	'Besos'
 );
 
 SELECT *
@@ -19,8 +19,8 @@ INSERT INTO sales_people(
 	last_name
 )VALUES(
 	3,
-	'Sergio',
-	'Smith'
+	'Rick',
+	'Romano'
 );
 
 SELECT *
@@ -33,22 +33,22 @@ INSERT INTO mechanic(
 	last_name 
 )VALUES(
 	3,
-	'Jim',
-	'Sanchez'
+	'Angel',
+	'Ortiz'
 );
 
 SELECT *
 FROM mechanic;
 
--- Insert for car table
+-- Insert for finance table
 INSERT INTO finance(
 	finance_id,
 	finance_type,
 	institution_name
 )VALUES(
 	3,
-	'Loan',
-	'Orange Bank'
+	'Credit',
+	'Chuck E Financial'
 );
 
 SELECT *
@@ -65,13 +65,13 @@ INSERT INTO car(
 	car_condition,
 	customer_id
 ) VALUES(
-	'WBANN73507B799197',
+	'WB10432A03ZB52629',
 	'BMW',
-	'7-Series',
-	'2020',
-	'0',
-	'2019-10-01',
-	'New',
+	'R1100',
+	'2019',
+	'11345',
+	'2019-08-01',
+	'Certified Preowned',
 	3
 );
 
@@ -86,13 +86,13 @@ INSERT INTO service(
 	amount,
 	customer_id,
 	vin 
-) VALUES(
-	1,
-	'5000 mile maintenance',
-	'2001-09-28',
-	'75.00',
-	1,
-	'JH4NA21673T649233'
+)VALUES(
+	2,
+	'Body repair: Passenger side',
+	'2020-07-28',
+	'2134.00',
+	3,
+	'WB10432A03ZB52629'
 );
 
 SELECT *
@@ -106,11 +106,11 @@ INSERT INTO service_order(
 	task_description,
 	parts_used
 )VALUES(
+	2,
+	2,
 	1,
-	1,
-	3,
-	'oil-change, tire rotation',
-	'synthetic oil'
+	'remove part, apply bondo,smooth, paint',
+	'bondo, paint,'
 );
 
 SELECT *
@@ -126,13 +126,13 @@ INSERT INTO invoice(
 	finance_id,
 	vin
 )VALUES(
-	1,
-	33000.00,
-	'2021-11-02',
-	2,
-	1,
-	1,
-	'1HFSC47443A201467'
+	3,
+	25000.00,
+	'2019-06-18',
+	3,
+	3,
+	3,
+	'WB10432A03ZB52629'
 );
 
 SELECT *
