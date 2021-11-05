@@ -23,7 +23,7 @@ CREATE TABLE finance(
 );
 
 CREATE TABLE car(
-	vin SERIAL PRIMARY KEY,
+	vin VARCHAR(20) PRIMARY KEY,
 	make VARCHAR(100),
 	model VARCHAR(100),
 	car_year VARCHAR(100),
@@ -40,7 +40,7 @@ CREATE TABLE service(
 	service_date DATE,
 	amount NUMERIC(12,2),
 	customer_id INTEGER,
-	vin INTEGER,
+	vin VARCHAR(20),
 	FOREIGN KEY(customer_id) REFERENCES customer(customer_id),
 	FOREIGN KEY(vin) REFERENCES car(vin)
 );
@@ -62,7 +62,7 @@ CREATE TABLE invoice(
 	sales_person_id INTEGER,
 	customer_id INTEGER,
 	finance_id INTEGER,
-	vin INTEGER,
+	vin VARCHAR(20),
 	FOREIGN KEY(sales_person_id) REFERENCES sales_people(sales_person_id),
 	FOREIGN KEY(customer_id) REFERENCES customer(customer_id), 
 	FOREIGN KEY(finance_id) REFERENCES finance(finance_id),
