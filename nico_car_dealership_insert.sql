@@ -97,3 +97,43 @@ INSERT INTO service(
 
 SELECT *
 FROM service;
+
+-- Insert for service_order table
+INSERT INTO service_order(
+	service_order_id,
+	service_id,
+	mechanic_id,
+	task_description,
+	parts_used
+)VALUES(
+	1,
+	1,
+	3,
+	'oil-change, tire rotation',
+	'synthetic oil'
+);
+
+SELECT *
+FROM service_order;
+
+-- Insert for invoice table
+INSERT INTO invoice(
+	invoice_id,
+	amount,
+	transaction_date,
+	sales_person_id,
+	customer_id,
+	finance_id,
+	vin
+)VALUES(
+	1,
+	33000.00,
+	'2021-11-02',
+	2,
+	1,
+	1,
+	'1HFSC47443A201467'
+);
+
+SELECT *
+FROM invoice;
