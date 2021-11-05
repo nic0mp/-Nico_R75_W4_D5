@@ -4,10 +4,11 @@ INSERT INTO customer(
 	first_name,
 	last_name
 )VALUES(
-	1,
-	'Ramon',
-	'Goose'
+	3,
+	'Renee',
+	'Dupree'
 );
+
 SELECT *
 FROM customer;
 
@@ -17,12 +18,13 @@ INSERT INTO sales_people(
 	first_name,
 	last_name
 )VALUES(
-	1,
-	'Tony',
-	'Jones'
+	3,
+	'Sergio',
+	'Smith'
 );
--- SELECT *
--- FROM sales_people;
+
+SELECT *
+FROM sales_people;
 
 -- Insert for mechanic table
 INSERT INTO mechanic(
@@ -30,10 +32,11 @@ INSERT INTO mechanic(
 	first_name,
 	last_name 
 )VALUES(
-	1,
-	'Sam',
-	'DeGeneres'
+	3,
+	'Jim',
+	'Sanchez'
 );
+
 SELECT *
 FROM mechanic;
 
@@ -43,13 +46,13 @@ INSERT INTO finance(
 	finance_type,
 	institution_name
 )VALUES(
-	1,
+	3,
 	'Loan',
-	'Chuck E Bank'
+	'Orange Bank'
 );
+
 SELECT *
 FROM finance;
-
 
 -- Insert for car table
 INSERT INTO car(
@@ -62,14 +65,35 @@ INSERT INTO car(
 	car_condition,
 	customer_id
 ) VALUES(
-	00000000001,
-	'Honda',
-	'Accord',
-	'2022',
-	'45',
-	'2021-10-01',
+	'WBANN73507B799197',
+	'BMW',
+	'7-Series',
+	'2020',
+	'0',
+	'2019-10-01',
 	'New',
-	1
+	3
 );
--- SELECT *
--- FROM customer;
+
+SELECT *
+FROM car;
+
+-- Insert for service table
+INSERT INTO service(
+	service_id,
+	service_type,
+	service_date,
+	amount,
+	customer_id,
+	vin 
+) VALUES(
+	1,
+	'5000 mile maintenance',
+	'2001-09-28',
+	'75.00',
+	1,
+	'JH4NA21673T649233'
+);
+
+SELECT *
+FROM service;
